@@ -1,71 +1,84 @@
-# Getting Started with Create React App
+# MeetMax - Authentication and Feed App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This React application simulates an authentication flow and provides a feed page accessible only to authenticated users. It uses Redux for state management, local storage for authentication, and provides routes for login, signup, password reset, and feed.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Authentication:**
+  - Login, Signup, and Password Reset functionalities.
+  - Form validation to ensure input accuracy and security.
+  - Simulated authentication using local storage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Feed Screen:**
+  - Accessible only to logged-in users.
+  - Simulates post interactions (like, comment, create) if implemented.
+  - State management for real-time updates (optional).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Responsiveness:**
+  - The application is designed to be responsive and adapt seamlessly to various screen sizes.
 
-### `npm test`
+## Running the Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Start the development server.
+- Open the application in your browser at `http://localhost:3000`.
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **`/src`**: Contains all the source files.
+  - **`/components`**: Reusable UI components.
+  - **`/pages`**: Pages for login, signup, forget-password, and feed.
+  - **`/hooks`**: Use a custom hook useWindowSize to get the Window Size.
+  - **`/reducers` `/features` `/store`**: Redux slices and store configuration.
+  - **`/styles`**: Global style for all components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **`/public`**: Static assets and HTML file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Routing
 
-### `npm run eject`
+- **`/login`**: Sign-in page.
+- **`/signup`**: Signup page.
+- **`/forget-password`**: Password reset page.
+- **`/feed`**: Feed page, accessible only to authenticated users.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Form Validation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Form validation is implemented to ensure:
+- Required fields are filled.
+- Email format is correct.
+- Password meets security requirements.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Simulated Authentication
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Login and Signup**: Credentials are checked against local storage.
+- **Logout**: Clears authentication state and redirects to the login page.
+- **Access Restriction**: The feed page is only accessible to logged-in users.
 
-## Learn More
+## Responsive Design
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application is built to be responsive, adjusting layout and content based on screen size for an optimal user experience on all devices.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Testing
 
-### Code Splitting
+Ensure all functionalities work as expected by:
+- Testing form validation and authentication flow.
+- Verifying access control to the feed page.
+- Checking responsiveness on different devices.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Assumptions
 
-### Analyzing the Bundle Size
+- Local storage is used to simulate backend interactions.
+- All form validations and authentication processes are handled locally.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Tools Used
 
-### Making a Progressive Web App
+- React
+- Redux
+- Styled-components
+- React Router DOM
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+For any questions or issues, please contact [Misbah Uddin Tareq](mailto:lumisbah92@gmail.com).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# meet-max
