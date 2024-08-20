@@ -13,8 +13,6 @@ This React application simulates an authentication flow and provides a feed page
 
 - **Feed Screen:**
   - Accessible only to logged-in users.
-  - Simulates post interactions (like, comment, create) if implemented.
-  - State management for real-time updates (optional).
 
 - **Responsiveness:**
   - The application is designed to be responsive and adapt seamlessly to various screen sizes.
