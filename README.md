@@ -4,7 +4,7 @@
 
 This React application simulates an authentication flow and provides a feed page accessible only to authenticated users. It uses Redux for state management, local storage for authentication, and provides routes for login, signup, password reset, and feed.
 
-## Live Site Link: [https://meetmax-ui.netlify.app](https://meetmax-ui.netlify.app)
+**Live Site Link:** [https://meetmax-ui.netlify.app](https://meetmax-ui.netlify.app)
 
 ## Features
 
