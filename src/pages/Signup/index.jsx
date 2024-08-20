@@ -62,13 +62,12 @@ const SignUp = () => {
   const handleSignUpClick = async () => {
     const isValid = await validateForm();
     if (isValid) {
-      dispatch(signUpUser(formData)).unwrap()
-        .then(() => {
-          navigate('/login'); // Redirect to feed if sign-up is successful
-        })
-        .catch((err) => {
-          return setErrors({err});
-        });
+      try {
+        await dispatch(signUpUser(formData)).unwrap();
+        navigate('/login');
+      } catch (err) {
+        console.error("SignUp failed:", err);
+      }
     }
   };
   

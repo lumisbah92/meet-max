@@ -31,10 +31,10 @@ export const signUpUser = createAsyncThunk(
   'auth/signUpUser',
   async ({ email, name, password, dob, gender }, { rejectWithValue }) => {
     try {
-      const existingUser = JSON.parse(localStorage.getItem('user'));
-      if (existingUser && existingUser.email === email) {
-        return rejectWithValue('User already exists');
-      }
+      //const existingUser = JSON.parse(localStorage.getItem('user'));
+      // if (existingUser && existingUser.email === email) {
+      //   return rejectWithValue('User already exists');
+      // }
 
       const newUser = { email, name, password, dob, gender };
       localStorage.setItem('user', JSON.stringify(newUser));

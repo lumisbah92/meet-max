@@ -56,13 +56,12 @@ const SignIn = () => {
   const handleSignInClick = async () => {
     const isValid = await validateForm();
     if (isValid) {
-      dispatch(loginUser(formData)).unwrap()
-        .then(() => {
-          navigate('/feed'); // Redirect to feed if login is successful
-        })
-        .catch(() => {
-          // Handle error if necessary
-        });
+      try {
+        await dispatch(loginUser(formData)).unwrap();
+        navigate('/feed');
+      } catch (error) {
+        console.error("Login failed:", error);
+      }
     }
   };
 
